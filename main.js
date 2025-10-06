@@ -19,7 +19,7 @@ if (searchForm) {
 
       let imdbId = "";
       fetch(
-        `http://www.omdbapi.com/?apikey=25a5eeaf&s=${searchValue}&type=movie`
+        `https://www.omdbapi.com/?apikey=25a5eeaf&s=${searchValue}&type=movie`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -27,7 +27,7 @@ if (searchForm) {
           if (data.Search) {
             data.Search.forEach((movie) => {
               imdbId = movie.imdbID;
-              fetch(`http://www.omdbapi.com/?apikey=25a5eeaf&i=${imdbId}`)
+              fetch(`https://www.omdbapi.com/?apikey=25a5eeaf&i=${imdbId}`)
                 .then((response) => response.json())
                 .then((data) => {
                   // console.log(data);
@@ -73,7 +73,7 @@ document.addEventListener("click", (e) => {
 function addToWatchlist(imdbId) {
   if (!imdbId) return;
 
-  fetch(`http://www.omdbapi.com/?apikey=25a5eeaf&i=${imdbId}`)
+  fetch(`https://www.omdbapi.com/?apikey=25a5eeaf&i=${imdbId}`)
     .then((response) => response.json())
     .then((data) => {
       checkData(data)
@@ -105,7 +105,7 @@ function getMovies(movie) {
             </div>
            <div class="details-wrapper">
               <p id="runtime">${movie.Runtime}</p>
-              <p id="genre" class="genre-text">${movie.Genre}</p>
+              <p id="genre">${movie.Genre}</p>
               <button class="watchlist-btn" id="add-btn" data-added="${movie.imdbID}"><i class="fa-solid fa-circle-plus"></i> Watchlist</button>
            </div>
             <p class="description">
@@ -133,7 +133,7 @@ function renderWatchlist(watchlist) {
             </div>
            <div class="details-wrapper">
               <p id="runtime">${movie.Runtime}</p>
-              <p id="genre" class="genre-text">${movie.Genre}</p>
+              <p id="genre">${movie.Genre}</p>
               <button class="watchlist-btn" id="remove-btn" data-removed="${movie.imdbID}"><i class="fa-solid fa-circle-minus"></i> Watchlist</button>
            </div>
             <p class="description">
