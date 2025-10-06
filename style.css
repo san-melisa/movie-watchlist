@@ -1,4 +1,234 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif;
+    background-color: #DCDCDC;
+    
+}
+
+.container {
+    width: 550px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    position: relative;
+
+}
+
+header {
+    background-size: cover;
+    background-position: 50% 20%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("images/hero.jpg");
+    height: 208px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+h1 {
+    font-size: 2.6rem;
+    margin: 0;
+}
+
+header > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.search-input-wrapper i {
+    position: absolute;
+    left: 10px;
+    pointer-events: none;
+    color: #9CA3AF;
+}
+
+.search-input-wrapper input {
+    padding-left: 35px;
+    border-right: 1px solid #DFDDDD; 
+    border-radius: 10px 0 0 10px;
+
+}
+
+.floating-form {
+    display: flex;
+    position: absolute;
+    top: 180px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    border: solid 1px #DFDDDD;
+    left: 50%;
+    z-index: 10;
+
+
+}
+
+
+.btn {
+    color: #404040;
+    background-color: #F9FAFB;
+    font-size: 0.9rem;
+   
+    
+}
+
+input,  .btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+
+}
+
+input { 
+    width: 340px;
+    color: #6B7280;
+    font-size: 0.9rem;
+}
+
+main {
+    margin-top: 65px;
+    padding: 0 30px 10px 30px;
+    
+}
+
+.title-wrapper , .details-wrapper , .movie-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+   
+    
+
+}
+
+.title-wrapper {
+    gap: 10px;
+    
+}
+
+.movie-container {
+    display: flex;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 20px;
+    gap: 20px;
+
+}
+.details-wrapper {
+    gap: 15px;
+}
+
+.details-wrapper > p {
+    font-size: 0.8rem;
+}
+
+.rating {
+    font-size: 0.8rem;
+}
+
+.rating i {
+    color: #FEC654;
+    font-size: 0.8rem;
+}
+
+.watchlist-btn {
+    background-color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+
+}
+
+.watchlist-btn i {
+    font-size: 1rem;
+}
+
+.movie-img { 
+    height: 150px;
+}
+
+.infos-wrapper {
+    width: 330px;
+}
+
+h3 {
+    font-weight: 500;
+    
+}
+
+.description {
+    color: #6B7280;
+    line-height: 20px;
+    font-size: 0.875rem;
+}
+
+.title-wrapper h3,.rating,
+.details-wrapper p, button,
+.description
+
+{
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.index-default {
+    color: #DFDDDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+   
+}
+
+.start-paragraph {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 0.2em;
+}
+
+.big-icon {
+    font-size: 5rem;
+}
+
+.small-icon {
+    font-size: 1.1rem;
+}
+
+.add-movie-paragraph {
+    color: #363636;
+    font-size: 0.9rem;
+}
+
+.empty-watchlist-paragraph {
+    margin-bottom: 0.5em;
+    font-size: 1.1rem;
+}
+
+.empty-watchlist-paragraph,
+.unable-to-find-paragraph,
+.add-movie-paragraph
+{
+    font-weight: 600;
+    
+}
+
+
+.unable-to-find-paragraph {
+    width: 321px;
+    text-align: center;
+    font-size: 1.2rem;
 }
