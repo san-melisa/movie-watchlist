@@ -113,9 +113,13 @@ input {
 }
 
 main {
-    margin-top: 65px;
     padding: 0 30px 30px 30px;
     
+}
+
+#main {
+    margin-top: 65px;
+
 }
 
 .title-wrapper , .details-wrapper , .movie-container{
@@ -148,6 +152,7 @@ main {
     font-size: 0.8rem;
 }
 
+
 .rating {
     font-size: 0.8rem;
 }
@@ -166,10 +171,12 @@ main {
 
 .watchlist-btn i {
     font-size: 1rem;
+    pointer-events: auto;
 }
 
 .movie-img { 
     height: 150px;
+    width: 102px;
 }
 
 .infos-wrapper {
@@ -253,3 +260,4 @@ h3 {
     text-align: center;
     font-size: 1.2rem;
 }
+
