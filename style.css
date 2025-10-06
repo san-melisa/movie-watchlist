@@ -5,6 +5,9 @@ html, body {
     background-color: #DCDCDC;
     
 }
+button {
+    cursor: pointer;
+}
 
 .container {
     width: 550px;
@@ -63,9 +66,9 @@ header > a {
 .floating-form {
     display: flex;
     position: absolute;
-    top: 180px;
+    top: 190px;
     background-color: #FFFFFF;
-    border-radius: 10px;
+    border-radius: 5px;
     transform: translateX(-50%);
     border: solid 1px #DFDDDD;
     left: 50%;
@@ -73,6 +76,19 @@ header > a {
 
 
 }
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+
+.search-input-wrapper:has(input:focus) {
+  border: 2px solid #007BFF;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
 
 
 .btn {
@@ -84,9 +100,9 @@ header > a {
 }
 
 input,  .btn {
-    padding: 10px 30px;
+    padding: 5px 30px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 
@@ -98,7 +114,7 @@ input {
 
 main {
     margin-top: 65px;
-    padding: 0 30px 10px 30px;
+    padding: 0 30px 30px 30px;
     
 }
 
@@ -120,6 +136,7 @@ main {
     display: flex;
     border-bottom: 1px solid #E5E7EB;
     padding-bottom: 20px;
+    padding-top: 20px;
     gap: 20px;
 
 }
@@ -143,7 +160,6 @@ main {
 .watchlist-btn {
     background-color: #FFFFFF;
     border: none;
-    cursor: pointer;
     font-size: 0.8rem;
 
 }
@@ -211,6 +227,11 @@ h3 {
 .add-movie-paragraph {
     color: #363636;
     font-size: 0.9rem;
+    
+}
+
+.index-default a {
+    text-decoration: none;
 }
 
 .empty-watchlist-paragraph {
